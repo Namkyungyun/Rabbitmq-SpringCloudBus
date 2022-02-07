@@ -1,0 +1,41 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: apigateway-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    gateway:
+      routes:
+        - id: repository-service
+          uri: lb://REPOSITORY-SERVICE
+          predicates:
+            - Path=/repository-service/**
+          filters:
+            - RewritePath=/repository-service/(?<segment>.*), /$\{segment}
+        - id: repository-service
+          uri: lb://REPOSITORY-SERVICE
+          predicates:
+            - Path=/repository-service/actuator/**
+            - Method=GET,POST
+          filters:
+            - RewritePath=/repository-service/(?<segment>.*), /$\{segment}
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, busrefresh, info
