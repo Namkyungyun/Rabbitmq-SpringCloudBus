@@ -1,0 +1,28 @@
+text:
+  change: change_after_2!
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  r2dbc:
+    url: r2dbc:h2:mem:///test
+    username: sa
+    password:
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

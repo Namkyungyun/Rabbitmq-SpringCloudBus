@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/apigateway-service/apigateway-service.iml" filepath="$PROJECT_DIR$/apigateway-service/apigateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-demo/config-demo.iml" filepath="$PROJECT_DIR$/config-demo/config-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/R2dbcRepository/demo.iml" filepath="$PROJECT_DIR$/R2dbcRepository/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-service/discovery-service.iml" filepath="$PROJECT_DIR$/discovery-service/discovery-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/r2dbc-springCloudBus.iml" filepath="$PROJECT_DIR$/.idea/r2dbc-springCloudBus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repository-service/repository-service.iml" filepath="$PROJECT_DIR$/repository-service/repository-service.iml" />
     </modules>
   </component>
 </project>

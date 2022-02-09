@@ -15,7 +15,7 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///C:/Users/skaru/Desktop/r2dbc-springCloudBus/configFile
+          search-locations: file:///C:/Users/skaru/Desktop/Rabbitmq-SpringCloudBus/configFile
 
 management:
   endpoints:
